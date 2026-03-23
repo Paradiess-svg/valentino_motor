@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengkel Valentino Motor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;700;900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-script {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 15s linear infinite;
+        }
+
+        .carousel-item {
+            display: none;
+        }
+
+        .carousel-item.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .dot.active {
+            background-color: #0071BC;
+            width: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+    <a href="https://wa.me/62821100450777?text=permisi%2C%20saya%20ingin%20tanya%20soal%20service%20motor" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="fixed bottom-6 right-6 z- bg-[#25D366] text-white w-14 h-14 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.3)] flex items-center justify-center text-3xl hover:scale-110 active:scale-95 transition-all duration-300 group">
+    
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+    <div class="bg-[#C1272D] text-white py-2 overflow-hidden sticky top-0 z-50 shadow-md">
+        <div class="flex animate-marquee font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] italic">
+            <span class="px-4"> ✮ SERVICE ✮ TUNE UP ✮ GANTI OLI ✮ VARIASI ✮ SPARE PART ✮ BAN ✮ DLL ✮</span>
+        </div>
+    </div>
+
+    <div class="bg-[#662D91] text-white py-1.5 text-center text-[10px] md:text-xs italic font-medium">
+        "Senantiasa Memberikan Pelayanan Terbaik"
+    </div>
+
+    <header class="py-6 md:py-8 text-center">
+        <h1 class="text-4xl md:text-6xl font-script text-[#2D2D2D]">Bengkel Valentino Motor</h1>
+    </header>
+
+    <section class="relative group w-full overflow-hidden">
+        <div id="hero-carousel" class="relative w-full">
+            <div class="carousel-item active">
+                <img src="asset_foto/Banner1.png" alt="PROMO 1" class="w-full h-[300px] md:h-[500px] object-cover relative z-0 ">
+            </div>
+            <div class="carousel-item">
+<img src="asset_foto/Banner2.png" alt="PROMO 1" class="w-full h-[300px] md:h-[500px] object-cover relative z-0">
+
+            </div>
+
+            <button onclick="prev('hero-carousel')"
+                class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 rounded-full shadow-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-10">
+                <i class="fas fa-chevron-left text-gray-800"></i>
+            </button>
+            <button onclick="next('hero-carousel')"
+                class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/80 rounded-full shadow-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all z-10">
+                <i class="fas fa-chevron-right text-gray-800"></i>
+            </button>
+        </div>
+        <div class="flex justify-center gap-2 mt-4 mb-6" id="hero-dots">
+            <span class="dot active h-2 w-2 rounded-full bg-gray-300 transition-all cursor-pointer"></span>
+            <span class="dot h-2 w-2 rounded-full bg-gray-300 transition-all cursor-pointer"></span>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 mt-10 ">
+        <div
+            class="bg-white border border-gray-100 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-8 md:p-14 relative z-0 group">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-6 text-center md:text-left">
+                    <h2 class="text-2xl md:text-4xl font-black leading-tight text-gray-900 tracking-tight">
+                        Menyediakan jasa dan produk untuk semua jenis motor anda
+                    </h2>
+                    <p class="text-sm md:text-lg font-semibold text-gray-500 italic">
+                        Pelayanan profesional, lengkap, dan terpercaya.
+                    </p>
+                    <div
+                        class="flex items-center justify-center md:justify-start gap-2 text-[#C1272D] font-bold italic">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="text-xs md:text-base uppercase tracking-tighter">KEDUNGHALANG, BOGOR UTARA</span>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img
+                            class="bg-gray-50 aspect-video rounded-2xl flex items-center justify-center text-gray-300 font-bold border-2 border-dashed border-gray-200 uppercase text-xs"
+                            src="asset_foto/unnamed (11).jpg" alt="FOTO">
+                        <img
+                            class="bg-gray-50 aspect-video rounded-2xl flex items-center justify-center text-gray-300 font-bold border-2 border-dashed border-gray-200 uppercase text-xs"
+                            src="asset_foto/unnamed (21).jpg" alt="FOTO">
+                    </div>
+                    <div class="w-full h-44 md:h-56 rounded-2xl overflow-hidden border-4 border-white shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d990.9488021383672!2d106.80555969176794!3d-6.547522799999993!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c407d6705083%3A0x9545a4bb226aa206!2sValentino%20Motor!5e0!3m2!1sen!2sid!4v1774191871940!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full border-0"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="flex justify-center mt-16">
+        <div class="bg-gray-100 p-1.5 rounded-2xl flex w-72 shadow-inner border border-gray-200">
+            <button id="btn-jasa" onclick="switchTab('jasa')"
+                class="flex-1 py-3 text-sm font-black rounded-xl transition-all bg-[#0071BC] text-white shadow-md uppercase tracking-wider">Jasa</button>
+            <button id="btn-produk" onclick="switchTab('produk')"
+                class="flex-1 py-3 text-sm font-black rounded-xl transition-all text-gray-400 uppercase tracking-wider">Produk</button>
+        </div>
+    </div>
+
+    <section id="service-box" class="max-w-6xl mx-auto px-4 mt-6">
+        <div
+            class="bg-[#0071BC] rounded-[3rem] p-10 md:p-20 text-white shadow-2xl border-b-[15px] border-[#0054A6] text-center">
+            <div id="content-jasa" class="space-y-4">
+                <ul class="text-sm md:text-2xl font-bold italic space-y-3">
+                    <li>Ganti Oli ✅</li>
+                    <li class="opacity-80 text-xs md:text-lg italic">ganti oli (mulai 45 rb)</li>
+                    <li>Servis Karburator ✅</li>
+                    <li class="opacity-80 text-xs md:text-lg italic">servis karburator (35 rb motor mio/beat 110cc)</li>
+                    <li>Servis Injeksi ✅</li>
+                    <li class="opacity-80 text-xs md:text-lg italic">servis injeksi (45-65 rb)</li>
+                    <li>Tune up ✅</li>
+                    <li>Bongkar Mesin ✅</li>
+                    <li>Urut Kabel ✅</li>
+                    <li>Bore up ✅</li>
+                    <li>Scan & Reset Ecu ✅</li>
+                    <li>Ganti Ban ✅</li>
+                    <li>Kampas Rem Depan ✅</li>
+                    <li class="opacity-80 text-xs md:text-lg italic">servis rem depan (mulai dari 25 rb)</li>
+                    <li>Kampas Rem Belakang ✅</li>
+                    <li class="opacity-80 text-xs md:text-lg italic">servis rem belakang (mulai dari 40 rb)</li>
+                    <li>Turun Mesin ✅</li>
+                    <li>VBelt Racing Daytona ✅</li>
+                    <li class="opacity-80 text-xs md:text-lg italic">vbelt racing daytona (mulai dari 155 rb)</li>
+                    
+                    
+                </ul>
+                <div class="pt-10 border-t border-white/10 mt-10">
+                    <p class="text-[10px] md:text-sm italic opacity-50">* harga fluktuatif tergantung motor</p>
+                </div>
+            </div>
+            <div id="content-produk" class="hidden py-10">
+                <ul class="text-3xl md:text-6xl font-black italic space-y-8">
+                    <li>OLI MESIN 🛢</li>
+                    <li>KAMPAS REM 🔧</li>
+                    <li>BAN MOTOR 🛵</li>
+                    <li>LAMPU 💡</li>
+                    <li>AKI 🔋</li>
+                    <li>DLL LENGKAP 📦</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="flex justify-center -mt-10 relative z-10">
+        <a href="https://wa.me/62821100450777?text=permisi%2C%20saya%20ingin%20tanya%20soal%20service%20motor" target="_blank" rel="noopener noreferrer"
+            class="bg-[#2ecc71] hover:bg-[#27ae60] text-white px-12 py-6 rounded-full font-black shadow-2xl flex items-center gap-4 transition-transform active:scale-95 text-lg md:text-xl uppercase tracking-tighter">
+            <span>KONTAK SEKARANG!</span>
+            <i class="fab fa-whatsapp text-3xl"></i>
+        </a>
+    </div>
+
+    <section class="max-w-2xl mx-auto pt-20">
+        <div id="testi-carousel" class="relative bg-white border rounded-[2.5rem] p-10 shadow-xl text-center">
+            <div class="carousel-item active space-y-4">
+                <div
+                    class="w-16 h-16 bg-gray-100 rounded-full mx-auto flex items-center justify-center text-gray-300 border shadow-inner">
+                    <i class="fas fa-user text-3xl"></i>
+                </div>
+                <h4 class="font-black text-gray-800">Dihar Izzan</h4>
+                <div class="text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-600 italic leading-relaxed">"Bengkel paling recommended di Bogor. Servisnya jujur
+                    dan harganya transparan!"</p>
+            </div>
+        </div>
+        <div class="flex justify-center gap-2 mt-6" id="testi-dots">
+            <span class="dot active h-2 w-2 rounded-full bg-gray-200"></span>
+            <span class="dot h-2 w-2 rounded-full bg-gray-200"></span>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 pt-20 pb-20 overflow-hidden">
+        <h3 class="text-center font-black text-gray-300 text-sm uppercase tracking-[0.4em] mb-10">Gallery Workshop</h3>
+
+        <div class="relative group">
+            <div class="overflow-hidden rounded-[2rem]">
+                <div id="gallery-track" class="flex transition-transform duration-500 ease-in-out gap-6">
+                    <img class="gallery-item flex-none w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] aspect-square bg-gray-100 rounded-[2.5rem] border-2 border-dashed border-gray-200 flex items-center justify-center font-bold text-gray-300 uppercase text-xs"
+                        src="asset_foto/unnamed (1).jpg" alt="GALERI 1">
+                    <img class="gallery-item flex-none w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] aspect-square bg-gray-100 rounded-[2.5rem] border-2 border-dashed border-gray-200 flex items-center justify-center font-bold text-gray-300 uppercase text-xs"
+                        src="asset_foto/unnamed (2).jpg" alt="GALERI 2">
+                    <img class="gallery-item flex-none w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] aspect-square bg-gray-100 rounded-[2.5rem] border-2 border-dashed border-gray-200 flex items-center justify-center font-bold text-gray-300 uppercase text-xs"
+                        src="asset_foto/unnamed (3).jpg" alt="GALERI 3">
+                    <img class="gallery-item flex-none w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] aspect-square bg-gray-100 rounded-[2.5rem] border-2 border-dashed border-gray-200 flex items-center justify-center font-bold text-gray-300 uppercase text-xs"
+                        src="asset_foto/unnamed (4).jpg" alt="GALERI 4">
+                    <img class="gallery-item flex-none w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] aspect-square bg-gray-100 rounded-[2.5rem] border-2 border-dashed border-gray-200 flex items-center justify-center font-bold text-gray-300 uppercase text-xs"
+                        src="asset_foto/unnamed (5).jpg" alt="GALERI 5">
+                    <img class="gallery-item flex-none w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] aspect-square bg-gray-100 rounded-[2.5rem] border-2 border-dashed border-gray-200 flex items-center justify-center font-bold text-gray-300 uppercase text-xs"
+                        src="asset_foto/unnamed (6).jpg" alt="GALERI 6">
+                    <img class="gallery-item flex-none w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] aspect-square bg-gray-100 rounded-[2.5rem] border-2 border-dashed border-gray-200 flex items-center justify-center font-bold text-gray-300 uppercase text-xs"
+                        src="asset_foto/unnamed (7).jpg" alt="GALERI 7">
+                    <img class="gallery-item flex-none w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] aspect-square bg-gray-100 rounded-[2.5rem] border-2 border-dashed border-gray-200 flex items-center justify-center font-bold text-gray-300 uppercase text-xs"
+                        src="asset_foto/unnamed (8).jpg" alt="GALERI 8">
+                    <img class="gallery-item flex-none w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] aspect-square bg-gray-100 rounded-[2.5rem] border-2 border-dashed border-gray-200 flex items-center justify-center font-bold text-gray-300 uppercase text-xs"
+                        src="asset_foto/unnamed (9).jpg" alt="GALERI 9">
+                    <img class="gallery-item flex-none w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] aspect-square bg-gray-100 rounded-[2.5rem] border-2 border-dashed border-gray-200 flex items-center justify-center font-bold text-gray-300 uppercase text-xs"
+                        src="asset_foto/unnamed (10).jpg" alt="GALERI 10">
+                </div>
+            </div>
+
+            <button onclick="prevGallery()"
+                class="absolute -left-2 md:-left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-gray-400 hover:text-[#0071BC] transition-all border border-gray-100 z-10">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button onclick="nextGallery()"
+                class="absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-gray-400 hover:text-[#0071BC] transition-all border border-gray-100 z-10">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div id="gallery-dots" class="flex justify-center gap-2 mt-8">
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="h-80 md:h-[500px] w-full">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d990.9488021383672!2d106.80555969176794!3d-6.547522799999993!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c407d6705083%3A0x9545a4bb226aa206!2sValentino%20Motor!5e0!3m2!1sen!2sid!4v1774191871940!5m2!1sen!2sid" 
+                class="w-full h-full" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <div class="p-10 md:p-20 flex flex-col justify-center space-y-10 bg-[#0071BC]">
+            <p class="text-lg md:text-xl font-bold">
+                    Hubungi Kami
+            </p>  
+            <div class="flex items-start gap-5">
+                
+                <a href="https://maps.app.goo.gl/SsHpXEt1VeUUEtoV7" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-map-marker-alt text-3xl text-red-500"></i>
+                    
+                <p class="text-sm md:text-lg font-bold">
+                    Jl. Kedung Halang No.7, Kedunghalang, Kec. Bogor Utara, Kota Bogor, Jawa Barat 16158     
+                </a>       </div>
+            <div class="flex items-center gap-5">
+                <i class="fas fa-phone-alt text-3xl text-green-400"></i>
+                <a href="https://wa.me/62821100450777?text=permisi%2C%20saya%20ingin%20tanya%20tanya%20boleh?%20" target="_blank" rel="noopener noreferrer">
+                <p class="text-2xl md:text-3xl font-black tracking-tighter italic">0821-1004-50777</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#662D91] py-4 text-center text-[10px] font-bold opacity-30 uppercase tracking-[0.5em]">
+        Valentino Motor © 2026
+    </div>
+</footer>
+
+    <script>
+        // Tab Logic
+        function switchTab(type) {
+            const btnJ = document.getElementById('btn-jasa');
+            const btnP = document.getElementById('btn-produk');
+            const cJ = document.getElementById('content-jasa');
+            const cP = document.getElementById('content-produk');
+
+            if (type === 'jasa') {
+                btnJ.className = "flex-1 py-3 text-sm font-black rounded-xl transition-all bg-[#0071BC] text-white shadow-md uppercase tracking-wider";
+                btnP.className = "flex-1 py-3 text-sm font-black rounded-xl transition-all text-gray-400 uppercase tracking-wider";
+                cJ.classList.remove('hidden'); cP.classList.add('hidden');
+            } else {
+                btnP.className = "flex-1 py-3 text-sm font-black rounded-xl transition-all bg-[#0071BC] text-white shadow-md uppercase tracking-wider";
+                btnJ.className = "flex-1 py-3 text-sm font-black rounded-xl transition-all text-gray-400 uppercase tracking-wider";
+                cP.classList.remove('hidden'); cJ.classList.add('hidden');
+            }
+        }
+
+        // Gallery Carousel Logic
+        let galleryIndex = 0;
+        const galleryTrack = document.getElementById('gallery-track');
+        function updateGallery() {
+            const itemWidth = galleryTrack.querySelector('.gallery-item').offsetWidth + 24; // item width + gap
+            galleryTrack.style.transform = `translateX(-${galleryIndex * itemWidth}px)`;
+        }
+        function nextGallery() {
+            const itemsCount = galleryTrack.querySelectorAll('.gallery-item').length;
+            const visibleCount = Math.floor(galleryTrack.offsetWidth / (galleryTrack.querySelector('.gallery-item').offsetWidth + 24));
+            galleryIndex = (galleryIndex + 1) % (itemsCount - visibleCount + 1);
+            updateGallery();
+        }
+        function prevGallery() {
+            const itemsCount = galleryTrack.querySelectorAll('.gallery-item').length;
+            const visibleCount = Math.floor(galleryTrack.offsetWidth / (galleryTrack.querySelector('.gallery-item').offsetWidth + 24));
+            galleryIndex = (galleryIndex - 1 + (itemsCount - visibleCount + 1)) % (itemsCount - visibleCount + 1);
+            updateGallery();
+        }
+
+
+        // Multi-Carousel Logic
+        const config = {
+            'hero-carousel': { i: 0, timer: null },
+            'testi-carousel': { i: 0, timer: null }
+        };
+
+        function show(id) {
+            const el = document.getElementById(id);
+            const items = el.querySelectorAll('.carousel-item');
+            const dots = document.getElementById(id.replace('carousel', 'dots'))?.querySelectorAll('.dot');
+            items.forEach((item, idx) => item.classList.toggle('active', idx === config[id].i));
+            if (dots) dots.forEach((dot, idx) => dot.classList.toggle('active', idx === config[id].i));
+        }
+
+        function next(id) {
+            const count = document.getElementById(id).querySelectorAll('.carousel-item').length;
+            config[id].i = (config[id].i + 1) % count;
+            show(id); reset(id);
+        }
+
+        function prev(id) {
+            const count = document.getElementById(id).querySelectorAll('.carousel-item').length;
+            config[id].i = (config[id].i - 1 + count) % count;
+            show(id); reset(id);
+        }
+
+        function start(id) { config[id].timer = setInterval(() => next(id), 5000); }
+        function reset(id) { clearInterval(config[id].timer); start(id); }
+
+        Object.keys(config).forEach(id => start(id));
+    </script>
+</body>
+
+</html>
